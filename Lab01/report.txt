@@ -1,351 +1,350 @@
+active connections
 
-Active Connections
-
-  Proto  Local Address          Foreign Address        State
-  TCP    0.0.0.0:135            DESKTOP-MFP40AR:0      LISTENING
-  RpcSs
+  proto  local address          foreign address        state
+  tcp    0.0.0.0:135            KOMPUTER:0      listening
+  rpcss
  [svchost.exe]
-  TCP    0.0.0.0:445            DESKTOP-MFP40AR:0      LISTENING
- Can not obtain ownership information
-  TCP    0.0.0.0:1947           DESKTOP-MFP40AR:0      LISTENING
+  tcp    0.0.0.0:445            KOMPUTER:0      listening
+ can not obtain ownership information
+  tcp    0.0.0.0:1947           KOMPUTER:0      listening
  [hasplms.exe]
-  TCP    0.0.0.0:2383           DESKTOP-MFP40AR:0      LISTENING
+  tcp    0.0.0.0:2383           KOMPUTER:0      listening
  [msmdsrv.exe]
-  TCP    0.0.0.0:5040           DESKTOP-MFP40AR:0      LISTENING
-  CDPSvc
+  tcp    0.0.0.0:5040           KOMPUTER:0      listening
+  cdpsvc
  [svchost.exe]
-  TCP    0.0.0.0:5432           DESKTOP-MFP40AR:0      LISTENING
+  tcp    0.0.0.0:5432           KOMPUTER:0      listening
  [postgres.exe]
-  TCP    0.0.0.0:5700           DESKTOP-MFP40AR:0      LISTENING
- Can not obtain ownership information
-  TCP    0.0.0.0:49664          DESKTOP-MFP40AR:0      LISTENING
+  tcp    0.0.0.0:5700           KOMPUTER:0      listening
+ can not obtain ownership information
+  tcp    0.0.0.0:49664          KOMPUTER:0      listening
  [lsass.exe]
-  TCP    0.0.0.0:49665          DESKTOP-MFP40AR:0      LISTENING
- Can not obtain ownership information
-  TCP    0.0.0.0:49666          DESKTOP-MFP40AR:0      LISTENING
-  EventLog
+  tcp    0.0.0.0:49665          KOMPUTER:0      listening
+ can not obtain ownership information
+  tcp    0.0.0.0:49666          KOMPUTER:0      listening
+  eventlog
  [svchost.exe]
-  TCP    0.0.0.0:49667          DESKTOP-MFP40AR:0      LISTENING
-  Schedule
+  tcp    0.0.0.0:49667          KOMPUTER:0      listening
+  schedule
  [svchost.exe]
-  TCP    0.0.0.0:49668          DESKTOP-MFP40AR:0      LISTENING
+  tcp    0.0.0.0:49668          KOMPUTER:0      listening
  [spoolsv.exe]
-  TCP    0.0.0.0:50277          DESKTOP-MFP40AR:0      LISTENING
- Can not obtain ownership information
-  TCP    127.0.0.1:1434         DESKTOP-MFP40AR:0      LISTENING
+  tcp    0.0.0.0:50277          KOMPUTER:0      listening
+ can not obtain ownership information
+  tcp    127.0.0.1:1434         KOMPUTER:0      listening
  [sqlservr.exe]
-  TCP    127.0.0.1:6463         DESKTOP-MFP40AR:0      LISTENING
- [Discord.exe]
-  TCP    127.0.0.1:7335         DESKTOP-MFP40AR:0      LISTENING
+  tcp    127.0.0.1:6463         KOMPUTER:0      listening
+ [discord.exe]
+  tcp    127.0.0.1:7335         KOMPUTER:0      listening
  [figma_agent.exe]
-  TCP    127.0.0.1:8884         DESKTOP-MFP40AR:0      LISTENING
- Can not obtain ownership information
-  TCP    127.0.0.1:9012         DESKTOP-MFP40AR:0      LISTENING
- [SupportAssistAgent.exe]
-  TCP    127.0.0.1:18412        DESKTOP-MFP40AR:0      LISTENING
+  tcp    127.0.0.1:8884         KOMPUTER:0      listening
+ can not obtain ownership information
+  tcp    127.0.0.1:9012         KOMPUTER:0      listening
+ [supportassistagent.exe]
+  tcp    127.0.0.1:18412        KOMPUTER:0      listening
  [figma_agent.exe]
-  TCP    127.0.0.1:44950        DESKTOP-MFP40AR:0      LISTENING
+  tcp    127.0.0.1:44950        KOMPUTER:0      listening
  [figma_agent.exe]
-  TCP    127.0.0.1:44960        DESKTOP-MFP40AR:0      LISTENING
+  tcp    127.0.0.1:44960        KOMPUTER:0      listening
  [figma_agent.exe]
-  TCP    127.0.0.1:60356        DESKTOP-MFP40AR:0      LISTENING
- [NVIDIA Web Helper.exe]
-  TCP    127.0.0.1:65485        DESKTOP-MFP40AR:0      LISTENING
- [Dsapi.exe]
-  TCP    172.29.64.1:139        DESKTOP-MFP40AR:0      LISTENING
- Can not obtain ownership information
-  TCP    192.168.0.13:139       DESKTOP-MFP40AR:0      LISTENING
- Can not obtain ownership information
-  TCP    192.168.0.13:49427     20.199.120.85:https    ESTABLISHED
-  WpnService
+  tcp    127.0.0.1:60356        KOMPUTER:0      listening
+ [nvidia web helper.exe]
+  tcp    127.0.0.1:65485        KOMPUTER:0      listening
+ [dsapi.exe]
+  tcp    172.29.64.1:139        KOMPUTER:0      listening
+ can not obtain ownership information
+  tcp    192.168.0.13:139       KOMPUTER:0      listening
+ can not obtain ownership information
+  tcp    192.168.0.13:49427     20.199.120.85:https    established
+  wpnservice
  [svchost.exe]
-  TCP    192.168.0.13:50190     wl-in-f188:5228        ESTABLISHED
+  tcp    192.168.0.13:50190     wl-in-f188:5228        established
  [opera.exe]
-  TCP    192.168.0.13:50303     149.154.167.50:https   ESTABLISHED
- [Telegram.exe]
-  TCP    192.168.0.13:50307     149.154.167.50:https   ESTABLISHED
- [Telegram.exe]
-  TCP    192.168.0.13:50407     149.154.167.41:https   ESTABLISHED
- [Telegram.exe]
-  TCP    192.168.0.13:50440     yandex:https           ESTABLISHED
+  tcp    192.168.0.13:50303     149.154.167.50:https   established
+ [telegram.exe]
+  tcp    192.168.0.13:50307     149.154.167.50:https   established
+ [telegram.exe]
+  tcp    192.168.0.13:50407     149.154.167.41:https   established
+ [telegram.exe]
+  tcp    192.168.0.13:50440     yandex:https           established
  [opera.exe]
-  TCP    192.168.0.13:50453     yandex:https           ESTABLISHED
+  tcp    192.168.0.13:50453     yandex:https           established
  [opera.exe]
-  TCP    192.168.0.13:50459     yabs:https             ESTABLISHED
+  tcp    192.168.0.13:50459     yabs:https             established
  [opera.exe]
-  TCP    192.168.0.13:57489     162.159.130.234:https  ESTABLISHED
- [Discord.exe]
-  TCP    192.168.0.13:58259     20.43.44.165:https     ESTABLISHED
- [SupportAssistAgent.exe]
-  TCP    192.168.0.13:60759     a23-64-12-59:https     CLOSE_WAIT
- [SearchApp.exe]
-  TCP    192.168.0.13:60767     lb-140-82-113-25-iad:https  ESTABLISHED
+  tcp    192.168.0.13:57489     162.159.130.234:https  established
+ [discord.exe]
+  tcp    192.168.0.13:58259     20.43.44.165:https     established
+ [supportassistagent.exe]
+  tcp    192.168.0.13:60759     a23-64-12-59:https     close_wait
+ [searchapp.exe]
+  tcp    192.168.0.13:60767     lb-140-82-113-25-iad:https  established
  [opera.exe]
-  TCP    192.168.0.13:60793     suggest:https          ESTABLISHED
+  tcp    192.168.0.13:60793     suggest:https          established
  [opera.exe]
-  TCP    192.168.0.13:60822     mc:https               ESTABLISHED
+  tcp    192.168.0.13:60822     mc:https               established
  [opera.exe]
-  TCP    192.168.0.13:60878     mail-yandex-ru-production-external:https  CLOSE_WAIT
+  tcp    192.168.0.13:60878     mail-yandex-ru-production-external:https  close_wait
  [opera.exe]
-  TCP    192.168.0.13:60885     vip01:https            CLOSE_WAIT
+  tcp    192.168.0.13:60885     vip01:https            close_wait
  [opera.exe]
-  TCP    192.168.0.13:60902     vip02:https            CLOSE_WAIT
+  tcp    192.168.0.13:60902     vip02:https            close_wait
  [opera.exe]
-  TCP    192.168.0.13:60922     fra16s08-in-f3:http    ESTABLISHED
+  tcp    192.168.0.13:60922     fra16s08-in-f3:http    established
  [opera.exe]
-  TCP    192.168.0.13:60923     fra16s08-in-f3:http    ESTABLISHED
+  tcp    192.168.0.13:60923     fra16s08-in-f3:http    established
  [opera.exe]
-  TCP    192.168.0.13:60924     fra16s08-in-f3:http    ESTABLISHED
+  tcp    192.168.0.13:60924     fra16s08-in-f3:http    established
  [opera.exe]
-  TCP    192.168.0.13:60927     translate:https        ESTABLISHED
+  tcp    192.168.0.13:60927     translate:https        established
  [opera.exe]
-  TCP    192.168.0.13:60930     z5h64q92x9:https       ESTABLISHED
+  tcp    192.168.0.13:60930     z5h64q92x9:https       established
  [opera.exe]
-  TCP    192.168.0.13:60945     translate:https        ESTABLISHED
+  tcp    192.168.0.13:60945     translate:https        established
  [opera.exe]
-  TCP    192.168.0.13:60965     151.101.193.69:https   ESTABLISHED
+  tcp    192.168.0.13:60965     151.101.193.69:https   established
  [opera.exe]
-  TCP    192.168.0.13:60966     151.101.193.69:https   ESTABLISHED
+  tcp    192.168.0.13:60966     151.101.193.69:https   established
  [opera.exe]
-  TCP    192.168.0.13:60973     a2-16-172-138:https    ESTABLISHED
+  tcp    192.168.0.13:60973     a2-16-172-138:https    established
  [opera.exe]
-  TCP    192.168.0.13:60985     146.75.120.193:https   ESTABLISHED
+  tcp    192.168.0.13:60985     146.75.120.193:https   established
  [opera.exe]
-  TCP    192.168.0.13:60986     fra24s08-in-f1:https   ESTABLISHED
+  tcp    192.168.0.13:60986     fra24s08-in-f1:https   established
  [opera.exe]
-  TCP    192.168.0.13:60989     xx-fbcdn-shv-02-fra5:https  TIME_WAIT
-  TCP    192.168.0.13:60992     stackoverflow:https    ESTABLISHED
+  tcp    192.168.0.13:60989     xx-fbcdn-shv-02-fra5:https  time_wait
+  tcp    192.168.0.13:60992     stackoverflow:https    established
  [opera.exe]
-  TCP    192.168.0.13:60995     52.109.89.14:https     TIME_WAIT
-  TCP    192.168.0.13:60996     52.109.89.14:https     TIME_WAIT
-  TCP    192.168.56.1:139       DESKTOP-MFP40AR:0      LISTENING
- Can not obtain ownership information
-  TCP    [::]:135               DESKTOP-MFP40AR:0      LISTENING
-  RpcSs
+  tcp    192.168.0.13:60995     52.109.89.14:https     time_wait
+  tcp    192.168.0.13:60996     52.109.89.14:https     time_wait
+  tcp    192.168.56.1:139       KOMPUTER:0      listening
+ can not obtain ownership information
+  tcp    [::]:135               KOMPUTER:0      listening
+  rpcss
  [svchost.exe]
-  TCP    [::]:445               DESKTOP-MFP40AR:0      LISTENING
- Can not obtain ownership information
-  TCP    [::]:1947              DESKTOP-MFP40AR:0      LISTENING
+  tcp    [::]:445               KOMPUTER:0      listening
+ can not obtain ownership information
+  tcp    [::]:1947              KOMPUTER:0      listening
  [hasplms.exe]
-  TCP    [::]:2383              DESKTOP-MFP40AR:0      LISTENING
+  tcp    [::]:2383              KOMPUTER:0      listening
  [msmdsrv.exe]
-  TCP    [::]:5432              DESKTOP-MFP40AR:0      LISTENING
+  tcp    [::]:5432              KOMPUTER:0      listening
  [postgres.exe]
-  TCP    [::]:5700              DESKTOP-MFP40AR:0      LISTENING
- Can not obtain ownership information
-  TCP    [::]:7680              DESKTOP-MFP40AR:0      LISTENING
- Can not obtain ownership information
-  TCP    [::]:49664             DESKTOP-MFP40AR:0      LISTENING
+  tcp    [::]:5700              KOMPUTER:0      listening
+ can not obtain ownership information
+  tcp    [::]:7680              KOMPUTER:0      listening
+ can not obtain ownership information
+  tcp    [::]:49664             KOMPUTER:0      listening
  [lsass.exe]
-  TCP    [::]:49665             DESKTOP-MFP40AR:0      LISTENING
- Can not obtain ownership information
-  TCP    [::]:49666             DESKTOP-MFP40AR:0      LISTENING
-  EventLog
+  tcp    [::]:49665             KOMPUTER:0      listening
+ can not obtain ownership information
+  tcp    [::]:49666             KOMPUTER:0      listening
+  eventlog
  [svchost.exe]
-  TCP    [::]:49667             DESKTOP-MFP40AR:0      LISTENING
-  Schedule
+  tcp    [::]:49667             KOMPUTER:0      listening
+  schedule
  [svchost.exe]
-  TCP    [::]:49668             DESKTOP-MFP40AR:0      LISTENING
+  tcp    [::]:49668             KOMPUTER:0      listening
  [spoolsv.exe]
-  TCP    [::]:50277             DESKTOP-MFP40AR:0      LISTENING
- Can not obtain ownership information
-  TCP    [::1]:1434             DESKTOP-MFP40AR:0      LISTENING
+  tcp    [::]:50277             KOMPUTER:0      listening
+ can not obtain ownership information
+  tcp    [::1]:1434             KOMPUTER:0      listening
  [sqlservr.exe]
-  TCP    [::1]:58840            DESKTOP-MFP40AR:0      LISTENING
+  tcp    [::1]:58840            KOMPUTER:0      listening
  [jhi_service.exe]
-  UDP    0.0.0.0:53             *:*                    
-  SharedAccess
+  udp    0.0.0.0:53             *:*                    
+  sharedaccess
  [svchost.exe]
-  UDP    0.0.0.0:500            *:*                    
-  IKEEXT
+  udp    0.0.0.0:500            *:*                    
+  ikeext
  [svchost.exe]
-  UDP    0.0.0.0:1434           *:*                    
+  udp    0.0.0.0:1434           *:*                    
  [sqlbrowser.exe]
-  UDP    0.0.0.0:1947           *:*                    
+  udp    0.0.0.0:1947           *:*                    
  [hasplms.exe]
-  UDP    0.0.0.0:3544           *:*                    
+  udp    0.0.0.0:3544           *:*                    
   iphlpsvc
  [svchost.exe]
-  UDP    0.0.0.0:4500           *:*                    
-  IKEEXT
+  udp    0.0.0.0:4500           *:*                    
+  ikeext
  [svchost.exe]
-  UDP    0.0.0.0:5050           *:*                    
-  CDPSvc
+  udp    0.0.0.0:5050           *:*                    
+  cdpsvc
  [svchost.exe]
-  UDP    0.0.0.0:5353           *:*                    
+  udp    0.0.0.0:5353           *:*                    
  [msedge.exe]
-  UDP    0.0.0.0:5353           *:*                    
+  udp    0.0.0.0:5353           *:*                    
  [opera.exe]
-  UDP    0.0.0.0:5353           *:*                    
+  udp    0.0.0.0:5353           *:*                    
  [opera.exe]
-  UDP    0.0.0.0:5353           *:*                    
+  udp    0.0.0.0:5353           *:*                    
  [msedge.exe]
-  UDP    0.0.0.0:5353           *:*                    
+  udp    0.0.0.0:5353           *:*                    
  [msedge.exe]
-  UDP    0.0.0.0:5353           *:*                    
+  udp    0.0.0.0:5353           *:*                    
  [opera.exe]
-  UDP    0.0.0.0:5353           *:*                    
+  udp    0.0.0.0:5353           *:*                    
  [opera.exe]
-  UDP    0.0.0.0:5353           *:*                    
+  udp    0.0.0.0:5353           *:*                    
  [opera.exe]
-  UDP    0.0.0.0:5353           *:*                    
+  udp    0.0.0.0:5353           *:*                    
  [opera.exe]
-  UDP    0.0.0.0:5353           *:*                    
+  udp    0.0.0.0:5353           *:*                    
  [opera.exe]
-  UDP    0.0.0.0:5353           *:*                    
+  udp    0.0.0.0:5353           *:*                    
  [opera.exe]
-  UDP    0.0.0.0:5353           *:*                    
+  udp    0.0.0.0:5353           *:*                    
  [msedge.exe]
-  UDP    0.0.0.0:5353           *:*                    
+  udp    0.0.0.0:5353           *:*                    
  [opera.exe]
-  UDP    0.0.0.0:5353           *:*                    
+  udp    0.0.0.0:5353           *:*                    
  [opera.exe]
-  UDP    0.0.0.0:5353           *:*                    
+  udp    0.0.0.0:5353           *:*                    
  [msedge.exe]
-  UDP    0.0.0.0:5353           *:*                    
+  udp    0.0.0.0:5353           *:*                    
  [opera.exe]
-  UDP    0.0.0.0:5353           *:*                    
+  udp    0.0.0.0:5353           *:*                    
  [opera.exe]
-  UDP    0.0.0.0:5353           *:*                    
+  udp    0.0.0.0:5353           *:*                    
  [opera.exe]
-  UDP    0.0.0.0:5353           *:*                    
+  udp    0.0.0.0:5353           *:*                    
  [msedge.exe]
-  UDP    0.0.0.0:5353           *:*                    
-  Dnscache
+  udp    0.0.0.0:5353           *:*                    
+  dnscache
  [svchost.exe]
-  UDP    0.0.0.0:5353           *:*                    
+  udp    0.0.0.0:5353           *:*                    
  [opera.exe]
-  UDP    0.0.0.0:5353           *:*                    
+  udp    0.0.0.0:5353           *:*                    
  [msedge.exe]
-  UDP    0.0.0.0:5355           *:*                    
-  Dnscache
+  udp    0.0.0.0:5355           *:*                    
+  dnscache
  [svchost.exe]
-  UDP    0.0.0.0:52513          *:*                    
+  udp    0.0.0.0:52513          *:*                    
  [hasplms.exe]
-  UDP    0.0.0.0:52514          *:*                    
+  udp    0.0.0.0:52514          *:*                    
  [hasplms.exe]
-  UDP    0.0.0.0:52515          *:*                    
+  udp    0.0.0.0:52515          *:*                    
  [hasplms.exe]
-  UDP    0.0.0.0:52516          *:*                    
+  udp    0.0.0.0:52516          *:*                    
  [hasplms.exe]
-  UDP    0.0.0.0:58481          *:*                    
-  SharedAccess
+  udp    0.0.0.0:58481          *:*                    
+  sharedaccess
  [svchost.exe]
-  UDP    0.0.0.0:58482          *:*                    
-  SharedAccess
+  udp    0.0.0.0:58482          *:*                    
+  sharedaccess
  [svchost.exe]
-  UDP    127.0.0.1:1900         *:*                    
-  SSDPSRV
+  udp    127.0.0.1:1900         *:*                    
+  ssdpsrv
  [svchost.exe]
-  UDP    127.0.0.1:10050        *:*                    
- [NVIDIA Web Helper.exe]
-  UDP    127.0.0.1:61184        *:*                    
+  udp    127.0.0.1:10050        *:*                    
+ [nvidia web helper.exe]
+  udp    127.0.0.1:61184        *:*                    
   iphlpsvc
  [svchost.exe]
-  UDP    127.0.0.1:61688        *:*                    
-  SSDPSRV
+  udp    127.0.0.1:61688        *:*                    
+  ssdpsrv
  [svchost.exe]
-  UDP    127.0.0.1:65148        *:*                    
+  udp    127.0.0.1:65148        *:*                    
  [nvcontainer.exe]
-  UDP    172.29.64.1:137        *:*                    
- Can not obtain ownership information
-  UDP    172.29.64.1:138        *:*                    
- Can not obtain ownership information
-  UDP    172.29.64.1:1900       *:*                    
-  SSDPSRV
+  udp    172.29.64.1:137        *:*                    
+ can not obtain ownership information
+  udp    172.29.64.1:138        *:*                    
+ can not obtain ownership information
+  udp    172.29.64.1:1900       *:*                    
+  ssdpsrv
  [svchost.exe]
-  UDP    172.29.64.1:61685      *:*                    
-  SSDPSRV
+  udp    172.29.64.1:61685      *:*                    
+  ssdpsrv
  [svchost.exe]
-  UDP    192.168.0.13:137       *:*                    
- Can not obtain ownership information
-  UDP    192.168.0.13:138       *:*                    
- Can not obtain ownership information
-  UDP    192.168.0.13:1900      *:*                    
-  SSDPSRV
+  udp    192.168.0.13:137       *:*                    
+ can not obtain ownership information
+  udp    192.168.0.13:138       *:*                    
+ can not obtain ownership information
+  udp    192.168.0.13:1900      *:*                    
+  ssdpsrv
  [svchost.exe]
-  UDP    192.168.0.13:51154     *:*                    
+  udp    192.168.0.13:51154     *:*                    
   iphlpsvc
  [svchost.exe]
-  UDP    192.168.0.13:61687     *:*                    
-  SSDPSRV
+  udp    192.168.0.13:61687     *:*                    
+  ssdpsrv
  [svchost.exe]
-  UDP    192.168.56.1:137       *:*                    
- Can not obtain ownership information
-  UDP    192.168.56.1:138       *:*                    
- Can not obtain ownership information
-  UDP    192.168.56.1:1900      *:*                    
-  SSDPSRV
+  udp    192.168.56.1:137       *:*                    
+ can not obtain ownership information
+  udp    192.168.56.1:138       *:*                    
+ can not obtain ownership information
+  udp    192.168.56.1:1900      *:*                    
+  ssdpsrv
  [svchost.exe]
-  UDP    192.168.56.1:61686     *:*                    
-  SSDPSRV
+  udp    192.168.56.1:61686     *:*                    
+  ssdpsrv
  [svchost.exe]
-  UDP    [::]:500               *:*                    
-  IKEEXT
+  udp    [::]:500               *:*                    
+  ikeext
  [svchost.exe]
-  UDP    [::]:1434              *:*                    
+  udp    [::]:1434              *:*                    
  [sqlbrowser.exe]
-  UDP    [::]:1947              *:*                    
+  udp    [::]:1947              *:*                    
  [hasplms.exe]
-  UDP    [::]:4500              *:*                    
-  IKEEXT
+  udp    [::]:4500              *:*                    
+  ikeext
  [svchost.exe]
-  UDP    [::]:5353              *:*                    
+  udp    [::]:5353              *:*                    
  [opera.exe]
-  UDP    [::]:5353              *:*                    
+  udp    [::]:5353              *:*                    
  [msedge.exe]
-  UDP    [::]:5353              *:*                    
+  udp    [::]:5353              *:*                    
  [opera.exe]
-  UDP    [::]:5353              *:*                    
+  udp    [::]:5353              *:*                    
  [opera.exe]
-  UDP    [::]:5353              *:*                    
+  udp    [::]:5353              *:*                    
  [msedge.exe]
-  UDP    [::]:5353              *:*                    
+  udp    [::]:5353              *:*                    
  [opera.exe]
-  UDP    [::]:5353              *:*                    
+  udp    [::]:5353              *:*                    
  [msedge.exe]
-  UDP    [::]:5353              *:*                    
+  udp    [::]:5353              *:*                    
  [msedge.exe]
-  UDP    [::]:5353              *:*                    
-  Dnscache
+  udp    [::]:5353              *:*                    
+  dnscache
  [svchost.exe]
-  UDP    [::]:5353              *:*                    
+  udp    [::]:5353              *:*                    
  [opera.exe]
-  UDP    [::]:5353              *:*                    
+  udp    [::]:5353              *:*                    
  [opera.exe]
-  UDP    [::]:5353              *:*                    
+  udp    [::]:5353              *:*                    
  [opera.exe]
-  UDP    [::]:5353              *:*                    
+  udp    [::]:5353              *:*                    
  [opera.exe]
-  UDP    [::]:5355              *:*                    
-  Dnscache
+  udp    [::]:5355              *:*                    
+  dnscache
  [svchost.exe]
-  UDP    [::]:58483             *:*                    
-  SharedAccess
+  udp    [::]:58483             *:*                    
+  sharedaccess
  [svchost.exe]
-  UDP    [::1]:1900             *:*                    
-  SSDPSRV
+  udp    [::1]:1900             *:*                    
+  ssdpsrv
  [svchost.exe]
-  UDP    [::1]:57312            *:*                    
+  udp    [::1]:57312            *:*                    
  [postgres.exe]
-  UDP    [::1]:61684            *:*                    
-  SSDPSRV
+  udp    [::1]:61684            *:*                    
+  ssdpsrv
  [svchost.exe]
-  UDP    [fe80::a46:db68:50bb:bc3e%51]:1900  *:*                    
-  SSDPSRV
+  udp    [fe80::a46:db68:50bb:bc3e%51]:1900  *:*                    
+  ssdpsrv
  [svchost.exe]
-  UDP    [fe80::a46:db68:50bb:bc3e%51]:61681  *:*                    
-  SSDPSRV
+  udp    [fe80::a46:db68:50bb:bc3e%51]:61681  *:*                    
+  ssdpsrv
  [svchost.exe]
-  UDP    [fe80::d17:9e9c:a62b:f4a8%20]:1900  *:*                    
-  SSDPSRV
+  udp    [fe80::d17:9e9c:a62b:f4a8%20]:1900  *:*                    
+  ssdpsrv
  [svchost.exe]
-  UDP    [fe80::d17:9e9c:a62b:f4a8%20]:61683  *:*                    
-  SSDPSRV
+  udp    [fe80::d17:9e9c:a62b:f4a8%20]:61683  *:*                    
+  ssdpsrv
  [svchost.exe]
-  UDP    [fe80::a5ab:d7a4:f0da:4114%10]:1900  *:*                    
-  SSDPSRV
+  udp    [fe80::a5ab:d7a4:f0da:4114%10]:1900  *:*                    
+  ssdpsrv
  [svchost.exe]
-  UDP    [fe80::a5ab:d7a4:f0da:4114%10]:61682  *:*                    
-  SSDPSRV
+  udp    [fe80::a5ab:d7a4:f0da:4114%10]:61682  *:*                    
+  ssdpsrv
  [svchost.exe]
