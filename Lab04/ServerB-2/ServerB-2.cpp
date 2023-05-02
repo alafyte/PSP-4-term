@@ -139,21 +139,23 @@ void GetServer(char* call, short port, struct sockaddr* from, int* flen)
 
 		all.sin_family = AF_INET;
 		all.sin_port = htons(port);
-		all.sin_addr.s_addr = inet_addr("127.255.255.255");;
+		all.sin_addr.s_addr = inet_addr("127.255.255.255");
 
 		if (sendto(cC, call, strlen(call) + 1, NULL, (sockaddr*)&all, sizeof(all)) == SOCKET_ERROR)
 			throw SetErrorMsgText("sendto:", WSAGetLastError());
 
-		if (recvfrom(cC, buf, sizeof(buf), NULL, from, flen) == SOCKET_ERROR)
-			throw  SetErrorMsgText("recvfrom:", WSAGetLastError());
-
-		if (strcmp(call, buf) == 0)
+		while (true)
 		{
-			countServers++;
-			cout << "There's a server with the same callsign!" << endl;
-			cout << "Count: " << countServers << endl;
-			cout << "IP: " << inet_ntoa(((SOCKADDR_IN*)from)->sin_addr) << endl;
-			cout << "Port: " << ntohs(((struct sockaddr_in*)from)->sin_port) << endl;
+			if (recvfrom(cC, buf, sizeof(buf), NULL, from, flen) == SOCKET_ERROR)
+				throw  SetErrorMsgText("recvfrom:", WSAGetLastError());
+
+			if (strcmp(call, buf) == 0)
+			{
+				countServers++;
+				cout << "There's a server with the same callsign!" << endl;
+				cout << "IP: " << inet_ntoa(((SOCKADDR_IN*)from)->sin_addr) << endl;
+				cout << "Port: " << ntohs(((struct sockaddr_in*)from)->sin_port) << endl;
+			}
 		}
 	}
 	catch (string errorMsgText)

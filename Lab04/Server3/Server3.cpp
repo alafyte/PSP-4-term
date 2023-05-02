@@ -16,7 +16,7 @@ void GetServer(char* call, short port, struct sockaddr* from, int* flen);
 
 
 
-int main() 
+int main()
 {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
@@ -28,12 +28,11 @@ int main()
 	int clientSize = sizeof(client);
 	char name[] = "Hello";
 
-	try
-	{
+	try	{
 		if (WSAStartup(MAKEWORD(2, 0), &wsaData) != 0)
 			throw  SetErrorMsgText("Startup:", WSAGetLastError());
 
-		cout << "SERVER #1" << endl;
+		cout << "SERVER #3" << endl;
 		cout << "Checking for other servers..." << endl;
 		GetServer(name, 2000, (sockaddr*)&client, &clientSize);
 
@@ -45,7 +44,7 @@ int main()
 		SOCKADDR_IN serv;
 		serv.sin_family = AF_INET;
 		serv.sin_port = htons(2000);
-		serv.sin_addr.s_addr = inet_addr("127.0.0.2");
+		serv.sin_addr.s_addr = inet_addr("127.0.0.4");
 
 		if (bind(sS, (LPSOCKADDR)&serv, sizeof(serv)) == SOCKET_ERROR)
 			throw  SetErrorMsgText("bind:", WSAGetLastError());
@@ -115,7 +114,7 @@ bool PutAnswerToClient(char* name, short port, struct sockaddr* to, int* lto)
 	return sendto(port, name, lenghts + 1, NULL, to, *lto);
 }
 
-void GetServer(char* call, short port, struct sockaddr* from, int* flen) 
+void GetServer(char* call, short port, struct sockaddr* from, int* flen)
 {
 	SOCKET cC;
 	SOCKADDR_IN all;
@@ -125,7 +124,7 @@ void GetServer(char* call, short port, struct sockaddr* from, int* flen)
 	int optval = 1;
 	char buf[50];
 
-	try 
+	try
 	{
 		if ((cC = socket(AF_INET, SOCK_DGRAM, NULL)) == INVALID_SOCKET)
 			throw  SetErrorMsgText("socket:", WSAGetLastError());
@@ -142,6 +141,7 @@ void GetServer(char* call, short port, struct sockaddr* from, int* flen)
 
 		if (sendto(cC, call, strlen(call) + 1, NULL, (sockaddr*)&all, sizeof(all)) == SOCKET_ERROR)
 			throw SetErrorMsgText("sendto:", WSAGetLastError());
+
 		while (true)
 		{
 			if (recvfrom(cC, buf, sizeof(buf), NULL, from, flen) == SOCKET_ERROR)
@@ -151,7 +151,6 @@ void GetServer(char* call, short port, struct sockaddr* from, int* flen)
 			{
 				countServers++;
 				cout << "There's a server with the same callsign!" << endl;
-				cout << "Count: " << countServers << endl;
 				cout << "IP: " << inet_ntoa(((SOCKADDR_IN*)from)->sin_addr) << endl;
 				cout << "Port: " << ntohs(((struct sockaddr_in*)from)->sin_port) << endl;
 			}
@@ -159,10 +158,10 @@ void GetServer(char* call, short port, struct sockaddr* from, int* flen)
 	}
 	catch (string errorMsgText)
 	{
-		if (WSAGetLastError() == WSAETIMEDOUT) 
+		if (WSAGetLastError() == WSAETIMEDOUT)
 		{
 			cout << "Number of servers with the same callsign: " << countServers << endl;
-			if (closesocket(cC) == SOCKET_ERROR) 
+			if (closesocket(cC) == SOCKET_ERROR)
 				throw SetErrorMsgText("closesocket: ", WSAGetLastError());
 		}
 		else throw SetErrorMsgText("GetServer:", WSAGetLastError());

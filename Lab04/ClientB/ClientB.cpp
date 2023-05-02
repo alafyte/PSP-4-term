@@ -51,7 +51,7 @@ bool GetServer(char* name, short port, sockaddr* from, int* flen)
 
     ((SOCKADDR_IN*)from)->sin_family = AF_INET;
     ((SOCKADDR_IN*)from)->sin_port = htons(port);
-    ((SOCKADDR_IN*)from)->sin_addr.s_addr = inet_addr("127.255.255.255");;
+    ((SOCKADDR_IN*)from)->sin_addr.s_addr = inet_addr("127.255.255.255");
     int lbuf;
     char ibuf[50];
     int optval = 1;
