@@ -1,4 +1,5 @@
-﻿#pragma comment(lib, "WS2_32.lib") 
+﻿
+#pragma comment(lib, "WS2_32.lib") 
 #pragma warning(disable: 4996)
 #include "Winsock2.h"
 #include "stdafx.h"
@@ -16,7 +17,7 @@ void GetServer(char* call, short port, struct sockaddr* from, int* flen);
 
 
 
-int main() 
+int main()
 {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
@@ -114,7 +115,7 @@ bool PutAnswerToClient(char* name, short port, struct sockaddr* to, int* lto)
 	return sendto(port, name, lenghts + 1, NULL, to, *lto);
 }
 
-void GetServer(char* call, short port, struct sockaddr* from, int* flen) 
+void GetServer(char* call, short port, struct sockaddr* from, int* flen)
 {
 	SOCKET cC;
 	SOCKADDR_IN all;
@@ -124,7 +125,7 @@ void GetServer(char* call, short port, struct sockaddr* from, int* flen)
 	int optval = 1;
 	char buf[50];
 
-	try 
+	try
 	{
 		if ((cC = socket(AF_INET, SOCK_DGRAM, NULL)) == INVALID_SOCKET)
 			throw  SetErrorMsgText("socket:", WSAGetLastError());
@@ -145,7 +146,7 @@ void GetServer(char* call, short port, struct sockaddr* from, int* flen)
 		if (recvfrom(cC, buf, sizeof(buf), NULL, from, flen) == SOCKET_ERROR)
 			throw  SetErrorMsgText("recvfrom:", WSAGetLastError());
 
-		if (strcmp(call, buf) == 0) 
+		if (strcmp(call, buf) == 0)
 		{
 			countServers++;
 			cout << "There's a server with the same callsign!" << endl;
@@ -158,14 +159,12 @@ void GetServer(char* call, short port, struct sockaddr* from, int* flen)
 	}
 	catch (string errorMsgText)
 	{
-		if (WSAGetLastError() == WSAETIMEDOUT) 
+		if (WSAGetLastError() == WSAETIMEDOUT)
 		{
 			cout << "Number of servers with the same callsign: " << countServers << endl;
-			if (closesocket(cC) == SOCKET_ERROR) 
+			if (closesocket(cC) == SOCKET_ERROR)
 				throw SetErrorMsgText("closesocket: ", WSAGetLastError());
 		}
 		else throw SetErrorMsgText("GetServer:", WSAGetLastError());
 	}
 }
-
-
