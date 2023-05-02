@@ -23,6 +23,7 @@ int main()
     {
         if (WSAStartup(MAKEWORD(2, 0), &wsaData) != 0)
             throw SetErrorMsgText("Startup: ", WSAGetLastError());
+        cout << "CLIENT" << endl;
         if ((sock = socket(AF_INET, SOCK_DGRAM, NULL)) == INVALID_SOCKET)
             throw SetErrorMsgText("socket: ", WSAGetLastError());
         if (GetServer(name, 2000, (sockaddr*)&from, &lfrom))
@@ -50,7 +51,7 @@ bool GetServer(char* name, short port, sockaddr* from, int* flen)
 
     ((SOCKADDR_IN*)from)->sin_family = AF_INET;
     ((SOCKADDR_IN*)from)->sin_port = htons(port);
-    ((SOCKADDR_IN*)from)->sin_addr.s_addr = INADDR_BROADCAST;
+    ((SOCKADDR_IN*)from)->sin_addr.s_addr = inet_addr("127.255.255.255");;
     int lbuf;
     char ibuf[50];
     int optval = 1;

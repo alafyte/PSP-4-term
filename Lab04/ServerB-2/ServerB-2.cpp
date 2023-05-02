@@ -34,6 +34,7 @@ int main()
 		if (WSAStartup(MAKEWORD(2, 0), &wsaData) != 0)
 			throw  SetErrorMsgText("Startup:", WSAGetLastError());
 
+		cout << "SERVER #2" << endl;
 		cout << "Checking for other servers..." << endl;
 		GetServer(name, 2000, (sockaddr*)&client, &clientSize);
 
@@ -45,25 +46,25 @@ int main()
 		SOCKADDR_IN serv;
 		serv.sin_family = AF_INET;
 		serv.sin_port = htons(2000);
-		serv.sin_addr.s_addr = INADDR_ANY;
+		serv.sin_addr.s_addr = inet_addr("127.0.0.3");
 
 		if (bind(sS, (LPSOCKADDR)&serv, sizeof(serv)) == SOCKET_ERROR)
 			throw  SetErrorMsgText("bind:", WSAGetLastError());
 
-		SOCKADDR_IN clientU;
-		int clientSize = sizeof(clientU);
+		SOCKADDR_IN clientB;
+		int clientSize = sizeof(clientB);
 
 		while (true)
 		{
-			if (GetRequestFromClient(name, sS, (SOCKADDR*)&clientU, &clientSize))
+			if (GetRequestFromClient(name, sS, (SOCKADDR*)&clientB, &clientSize))
 			{
 				cout << endl;
 				cout << "Client socket:" << endl;
-				cout << "IP: " << inet_ntoa(clientU.sin_addr) << endl;
-				cout << "Port: " << htons(clientU.sin_port) << endl;
+				cout << "IP: " << inet_ntoa(clientB.sin_addr) << endl;
+				cout << "Port: " << htons(clientB.sin_port) << endl;
 				cout << endl;
 
-				if (PutAnswerToClient(name, sS, (SOCKADDR*)&clientU, &clientSize))
+				if (PutAnswerToClient(name, sS, (SOCKADDR*)&clientB, &clientSize))
 				{
 					cout << "Success!" << endl;
 				}
@@ -138,7 +139,7 @@ void GetServer(char* call, short port, struct sockaddr* from, int* flen)
 
 		all.sin_family = AF_INET;
 		all.sin_port = htons(port);
-		all.sin_addr.s_addr = INADDR_BROADCAST;
+		all.sin_addr.s_addr = inet_addr("127.255.255.255");;
 
 		if (sendto(cC, call, strlen(call) + 1, NULL, (sockaddr*)&all, sizeof(all)) == SOCKET_ERROR)
 			throw SetErrorMsgText("sendto:", WSAGetLastError());
@@ -150,11 +151,9 @@ void GetServer(char* call, short port, struct sockaddr* from, int* flen)
 		{
 			countServers++;
 			cout << "There's a server with the same callsign!" << endl;
-			cout << "Count:" << countServers << endl;
+			cout << "Count: " << countServers << endl;
 			cout << "IP: " << inet_ntoa(((SOCKADDR_IN*)from)->sin_addr) << endl;
 			cout << "Port: " << ntohs(((struct sockaddr_in*)from)->sin_port) << endl;
-			cin.get();
-			exit(0);
 		}
 	}
 	catch (string errorMsgText)
