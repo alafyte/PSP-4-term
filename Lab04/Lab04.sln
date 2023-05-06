@@ -9,7 +9,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ClientB", "ClientB\ClientB.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ServerB-2", "ServerB-2\ServerB-2.vcxproj", "{9C91B80C-8A62-462A-8BC0-D0BD27A66783}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Server3", "Server3\Server3.vcxproj", "{835D052E-437F-42F4-AE9F-C818AC208B8C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ServerB-3", "ServerB-3\ServerB-3.vcxproj", "{835D052E-437F-42F4-AE9F-C818AC208B8C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

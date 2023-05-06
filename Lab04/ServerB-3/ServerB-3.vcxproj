@@ -24,6 +24,7 @@
     <ProjectGuid>{835d052e-437f-42f4-ae9f-c818ac208b8c}</ProjectGuid>
     <RootNamespace>Server3</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>ServerB-3</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -140,7 +141,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Errors.cpp" />
-    <ClCompile Include="Server3.cpp" />
+    <ClCompile Include="ServerB-3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
