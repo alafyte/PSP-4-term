@@ -19,21 +19,22 @@ int main()
 			INFINITE, NULL)) == INVALID_HANDLE_VALUE)
 			throw SetPipeError("create:", GetLastError());
 
-		if (!ConnectNamedPipe(hPipe, NULL)) // ожидать клиента 
-			throw SetPipeError("connect:", GetLastError());
-		char buf[50];
-		while (ReadFile(hPipe, buf, sizeof(buf), &ps, NULL))
+		while (true)
 		{
-			cout << buf << endl;
+			if (!ConnectNamedPipe(hPipe, NULL)) // ожидать клиента 
+				throw SetPipeError("connect:", GetLastError());
+			char buf[50];
+			while (ReadFile(hPipe, buf, sizeof(buf), &ps, NULL))
+			{
+				cout << buf << endl;
 
-			if (!WriteFile(hPipe, buf, sizeof(buf), &ps, NULL))
-				throw SetPipeError("WriteFile: ", GetLastError());
+				if (!WriteFile(hPipe, buf, sizeof(buf), &ps, NULL))
+					throw SetPipeError("WriteFile: ", GetLastError());
+			}
+
+			if (!DisconnectNamedPipe(hPipe))
+				throw SetPipeError("Disconnect: ", GetLastError());
 		}
-
-
-
-		if (!DisconnectNamedPipe(hPipe))
-			throw SetPipeError("Disconnect: ", GetLastError());
 		if (!CloseHandle(hPipe))
 			throw SetPipeError("Close: ", GetLastError());
 

@@ -11,7 +11,6 @@ int main()
 
     try
     {
-        int message_amount = 100;
         char obuf[50] = "Hello from ClientNPct!";
         char ibuf[50];
 
