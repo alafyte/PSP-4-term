@@ -1,6 +1,6 @@
 ﻿#include "stdafx.h"
 
-#define NAME L"\\\\.\\mailslot\\Box"
+#define NAME L"\\\\*\\mailslot\\Box"
 
 int main()
 {
@@ -9,7 +9,7 @@ int main()
 
 	HANDLE hM; // дескриптор почтового ящика 
 	DWORD wb; // длина записанного сообщения
-	char wbuf[] = "Hello from Maislot-client"; // буфер вывода 
+	char obuf[50];
 	try
 	{
 		if ((hM = CreateFile(NAME,
@@ -20,16 +20,20 @@ int main()
 			NULL, NULL)) == INVALID_HANDLE_VALUE)
 			throw SetErrorMsgText("CreateFileError", WSAGetLastError());
 
-		for (int i = 0; i < 100; i++)
+		for (int i = 0; i < 30; i++)
+		{
+			string obufstr = "Hello from Client " + to_string(i + 1);
+			strcpy_s(obuf, obufstr.c_str());
 			if (!WriteFile(hM,
-				wbuf, // буфер
-				sizeof(wbuf), // размер буфера
+				obuf, // буфер
+				sizeof(obuf), // размер буфера
 				&wb, // записано
 				NULL))
 				throw SetErrorMsgText("ReadFileError", WSAGetLastError());
+		}
 
-		strcpy_s(wbuf,  "STOP");
-		if (!WriteFile(hM, wbuf, sizeof(wbuf), &wb, NULL))
+		strcpy_s(obuf,  "STOP");
+		if (!WriteFile(hM, obuf, sizeof(obuf), &wb, NULL))
 			throw SetErrorMsgText("ReadFileError", WSAGetLastError());
 		
 	}
