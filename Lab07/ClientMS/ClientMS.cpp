@@ -1,6 +1,7 @@
 ﻿#include "stdafx.h"
 
-#define NAME L"\\\\*\\mailslot\\Box"
+#define NAME L"\\\\.\\mailslot\\Box"
+//#define NAME L"\\\\*\\mailslot\\Box"
 
 int main()
 {
