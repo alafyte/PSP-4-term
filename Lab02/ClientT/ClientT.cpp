@@ -13,7 +13,7 @@ int main()
 {
     setlocale(LC_ALL, "rus");
 
-    SOCKET sS; // дескриптор сокета
+    SOCKET sS;
     WSADATA wsaData;
     try
     {
@@ -22,9 +22,9 @@ int main()
         if ((sS = socket(AF_INET, SOCK_STREAM, NULL)) == INVALID_SOCKET)
             throw SetErrorMsgText("socket:", WSAGetLastError());
 
-        SOCKADDR_IN serv; // параметры сокета sS
-        serv.sin_family = AF_INET; // используется IP-адресация
-        serv.sin_port = htons(2000); // порт 2000
+        SOCKADDR_IN serv;
+        serv.sin_family = AF_INET;
+        serv.sin_port = htons(2000);
         serv.sin_addr.s_addr = inet_addr("127.0.0.1");
 
         if ((connect(sS, (sockaddr*)&serv, sizeof(serv))) == SOCKET_ERROR)
@@ -33,7 +33,7 @@ int main()
         char ibuf[50] = "server: принято ";
         int  libuf = 0, lobuf = 0;
 
-        int message_amount = 1000;
+        int message_amount = 100;
 
         const clock_t start = clock();
         for (int i = 1; i <= message_amount; i++) 
@@ -66,6 +66,7 @@ int main()
         cout << endl << errorMsgText;
     }
 
+    cout << endl;
     system("pause");
     return 0;
 }

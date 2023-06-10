@@ -13,7 +13,7 @@ int main()
 {
     setlocale(LC_ALL, "rus");
 
-    SOCKET cC; // дескриптор сокета
+    SOCKET cC;
     WSADATA wsaData;
     try
     {
@@ -22,9 +22,9 @@ int main()
         if ((cC = socket(AF_INET, SOCK_STREAM, NULL)) == INVALID_SOCKET)
             throw SetErrorMsgText("socket:", WSAGetLastError());
 
-        SOCKADDR_IN serv; // параметры сокета sS
-        serv.sin_family = AF_INET; // используется IP-адресация
-        serv.sin_port = htons(2000); // порт 2000
+        SOCKADDR_IN serv;
+        serv.sin_family = AF_INET;
+        serv.sin_port = htons(2000);
         serv.sin_addr.s_addr = INADDR_ANY;
 
         if (bind(cC, (LPSOCKADDR)&serv, sizeof(serv)) == SOCKET_ERROR)
@@ -33,10 +33,10 @@ int main()
         if (listen(cC, SOMAXCONN) == SOCKET_ERROR)
             throw SetErrorMsgText("listen:", WSAGetLastError());
 
-        SOCKET cS; // сокет для обмена данными с клиентом
-        SOCKADDR_IN clnt; // параметры сокета клиента
-        memset(&clnt, 0, sizeof(clnt)); // обнулить память
-        int lclnt = sizeof(clnt); // размер SOCKADDR_IN
+        SOCKET cS;
+        SOCKADDR_IN clnt;
+        memset(&clnt, 0, sizeof(clnt));
+        int lclnt = sizeof(clnt);
         while (true)
         {
             if ((cS = accept(cC, (sockaddr*)&clnt, &lclnt)) == INVALID_SOCKET)
@@ -99,7 +99,7 @@ int main()
     {
         cout << endl << errorMsgText;
     }
-
+    cout << endl;
     system("pause");
     return 0;
 }
