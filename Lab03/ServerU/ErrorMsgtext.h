@@ -1,10 +1,11 @@
-#include "stdafx.h"
+#include <string>
+#include <WinSock2.h>
+#pragma once
 
-string GetErrorMsgText(int code) // cформировать текст ошибки
+std::string GetErrorMsgText(int code)
 {
-	string msgText;
-	switch (code)
-	{
+	std::string msgText;
+	switch (code) {
 	case WSAEINTR: msgText = "Работа функции прервана"; break;
 	case WSAEACCES:	msgText = "Разрешение отвергнуто"; break;
 	case WSAEFAULT: msgText = "Ошибочный адрес"; break;
@@ -57,10 +58,11 @@ string GetErrorMsgText(int code) // cформировать текст ошибки
 	case WSASYSCALLFAILURE: msgText = "Аварийное завершение системного вызова"; break;
 	default: break;
 	}
-	return msgText;
-};
 
-string SetErrorMsgText(string msgText, int code)
-{
-	return msgText + GetErrorMsgText(code);
-};
+	return msgText;
+}
+
+// функция для обработки стандартных ошибок библиотеки WS2_32.LIB
+std::string SetErrorMsgText(std::string msgText, int code) {
+	return msgText + GetErrorMsgText(code) + "\n\n";
+}
