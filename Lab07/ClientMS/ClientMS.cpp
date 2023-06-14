@@ -38,7 +38,7 @@ int main()
 		strcpy_s(obuf,  "STOP");
 		if (!WriteFile(hM, obuf, sizeof(obuf), &wb, NULL))
 			throw SetErrorMsgText("ReadFileError", WSAGetLastError());
-		
+		CloseHandle(hM);
 	}
 	catch(string error)
 	{ 
